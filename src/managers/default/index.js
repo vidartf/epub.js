@@ -491,7 +491,7 @@ class DefaultViewManager {
 
 			let top  = this.container.scrollTop + this.container.offsetHeight;
 
-			if(top < this.container.scrollHeight) {
+			if(this.container.scrollHeight - top > 0.99) {
 				this.scrollBy(0, this.layout.height, true);
 			} else {
 				next = this.views.last().section.next();
